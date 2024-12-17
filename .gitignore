@@ -1,0 +1,5 @@
+echo "*.image
+*.changes
+*.log
+*.cache" > .gitignore
+
