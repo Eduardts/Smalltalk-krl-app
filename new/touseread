@@ -1,0 +1,25 @@
+For Smalltalk usage:
+
+smalltalk
+
+Copy
+"Initialize framework"
+framework := AISecurityFramework new.
+framework decisionEngine: (DecisionEngine initializeWithRules: defaultRules).
+
+"Handle security event"
+event := SecurityEvent new
+    source: #external;
+    type: #accessAttempt;
+    target: 'resource123'.
+decision := framework handleSecurityEvent: event.
+For KRL usage:
+
+krl
+
+Copy
+;Initialize security
+SecurityControl()
+
+;Start main security loop
+MainSecurityLoop()
